@@ -19,8 +19,8 @@ invoke the `GetPluginInfo` RPC:
 
 ```shell
 $ docker run -it golang:latest sh -c \
-  "go get github.com/rexray/gocsi && \
-  make -C src/github.com/rexray/gocsi csi-sp"
+  "go get github.com/numanelahi/gocsi && \
+  make -C src/github.com/numanelahi/gocsi csi-sp"
 ```
 
 <a name="bootstrapper"></a>

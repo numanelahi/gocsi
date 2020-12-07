@@ -11,8 +11,8 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	csietcd "github.com/rexray/gocsi/middleware/serialvolume/etcd"
-	mwtypes "github.com/rexray/gocsi/middleware/serialvolume/types"
+	csietcd "github.com/numanelahi/gocsi/middleware/serialvolume/etcd"
+	mwtypes "github.com/numanelahi/gocsi/middleware/serialvolume/types"
 )
 
 var p mwtypes.VolumeLockerProvider

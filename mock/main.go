@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 
-	"github.com/rexray/gocsi"
-	"github.com/rexray/gocsi/mock/provider"
-	"github.com/rexray/gocsi/mock/service"
+	"github.com/numanelahi/gocsi"
+	"github.com/numanelahi/gocsi/mock/provider"
+	"github.com/numanelahi/gocsi/mock/service"
 )
 
 // main is ignored when this package is built as a go plug-in
