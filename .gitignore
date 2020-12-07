@@ -34,3 +34,7 @@ csi-sp.log
 
 # A macOS metadata file
 .DS_Store
+
+# Directorys added by IDE's
+.idea
+.vscode

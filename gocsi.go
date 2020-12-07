@@ -189,6 +189,10 @@ type StoragePlugin struct {
 	// or prevent the server from starting by returning a non-nil error.
 	BeforeServe func(context.Context, *StoragePlugin, net.Listener) error
 
+	// StoragePluginCallback provides a way to extend the
+	// grpc server with new services
+	StoragePluginCallback func(*grpc.Server)
+
 	// EnvVars is a list of default environment variables and values.
 	EnvVars []string
 
@@ -268,6 +272,11 @@ func (sp *StoragePlugin) Serve(ctx context.Context, lis net.Listener) error {
 			err = errors.New(
 				"either a controller or node service is required")
 			return
+		}
+
+		// Extends the GRPC server by adding new services
+		if sp.StoragePluginCallback != nil {
+			sp.StoragePluginCallback(sp.server)
 		}
 
 		// Always register the identity service.
