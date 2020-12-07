@@ -13,8 +13,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/akutz/gosync"
 
-	csictx "github.com/rexray/gocsi/context"
-	mwtypes "github.com/rexray/gocsi/middleware/serialvolume/types"
+	csictx "github.com/numanelahi/gocsi/context"
+	mwtypes "github.com/numanelahi/gocsi/middleware/serialvolume/types"
 )
 
 // New returns a new etcd volume lock provider.
