@@ -176,7 +176,7 @@ func (s *interceptor) rprintReqOrRep(w io.Writer, obj interface{}) {
 	printComma := false
 	for i := 0; i < nf; i++ {
 		name := tv.Field(i).Name
-		if strings.ToLower(name) != name {
+		if tv.Field(i).PkgPath != "" {
 			continue
 		}
 		if strings.Contains(name, "Secrets") {
